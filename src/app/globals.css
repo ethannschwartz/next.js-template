@@ -1,33 +1,13 @@
+@import "@flaticon/flaticon-uicons/css/regular/rounded.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.btn-primary {
+    @apply flex gap-1.5 items-center whitespace-nowrap bg-black duration-150 hover:bg-zinc-800 active:scale-95 active:bg-zinc-700 text-white font-medium px-4 py-1.5 rounded-lg disabled:opacity-50 disabled:pointer-events-none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.btn-secondary {
+    @apply flex gap-1.5 items-center whitespace-nowrap bg-transparent duration-150 hover:bg-zinc-600/10 active:scale-95 text-black font-medium px-4 py-1.5 rounded-lg disabled:opacity-50 disabled:pointer-events-none;
 }
