@@ -22,7 +22,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer className={'p-6 bg-black text-white'}>
-          © CloudNexus
+          © Created by Ethan Schwartz
         </footer>
       </body>
     </html>
