@@ -1,17 +1,9 @@
 "use client";
 import React from "react";
 import '../globals.css';
-import {usePathname} from "next/navigation";
-import NavLink from "@/app/components/nav-link";
+import {Tooltip} from "@nextui-org/tooltip";
 
 export default function Navbar() {
-    const pathname = usePathname();
-    const routes = [
-        {
-            name: 'Home',
-            route: '/',
-        },
-    ]
 
     return (
         <header className={'flex justify-between gap-6 items-center p-6'}>
@@ -19,19 +11,11 @@ export default function Navbar() {
                 <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" className={'w-6 h-6'} alt=""/>
                 <span className={'font-bold text-zinc-800 text-xl'}>NEXT.js Template</span>
             </span>
-            <div className={'relative flex items-center'}>
-                <ul className={'flex items-center gap-3'}>
-                    {
-                        routes.map((route, index) => {
-                            return (
-                                <li key={index} className={''}>
-                                    <NavLink route={route.route} name={route.name}/>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </div>
+            <Tooltip content={'Github'} className={'px-3 py-1 rounded-lg text-white text-xs bg-zinc-900'}>
+                <a href="https://github.com/ethannschwartz">
+                    <i className={'text-xl fi fi-brands-github'}></i>
+                </a>
+            </Tooltip>
         </header>
     )
 }

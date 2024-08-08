@@ -1,5 +1,6 @@
 import FeatureCard from "@/app/components/feature-card";
 import React from "react";
+import {Tooltip} from "@nextui-org/tooltip";
 
 export default function Home() {
 
@@ -11,10 +12,10 @@ export default function Home() {
             description: "Style elements efficiently using classes linked with auto-generated CSS for streamlined and responsive design.",
         },
         {
-            title: "Next Sitemap",
-            href: "https://nuxtseo.com/",
-            icon: "fi fi-rr-sitemap",
-            description: "Easily manage your site's structure; simply add files to the pages directory to have them included in /sitemap.xml.",
+            title: "Next UI",
+            href: "https://nextui.org/docs/guide/introduction",
+            icon: "https://avatars.githubusercontent.com/u/86160567?v=4",
+            description: "Access a diverse selection of components offered by Next UI for a consistent and intuitive user experience.",
         },
         {
             title: "AOS (Animate on Scroll)",
@@ -45,6 +46,7 @@ export default function Home() {
                                   title={feature.title}
                                   icon={feature.icon}
                                   description={feature.description}
+                                  href={feature.href}
                               />
                           </li>
                       )
@@ -52,7 +54,15 @@ export default function Home() {
               }
           </ul>
           <div className={'text-white p-12 rounded-lg bg-black font-mono mb-12'}>
-              For further documentation, please visit the <a href={'#'} className={'text-blue-600 underline underline-offset-4 hover:text-white'}>GitHub Repository</a>
+              For further documentation, please visit the&nbsp;
+              <Tooltip content={'Visit this Github repo'} className={'py-1 px-3 rounded-lg text-black text-xs bg-white'}>
+                  <a
+                      href={'https://github.com/ethannschwartz/next.js-template'}
+                      className={'text-indigo-500 hover:underline underline-offset-4'}
+                  >
+                      GitHub Repository
+                  </a>
+              </Tooltip>
           </div>
       </section>
   );
