@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.2.1",
+    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/system": "^2.2.5",
+    "@nextui-org/theme": "^2.2.9",
     "@nextui-org/tooltip": "^2.0.39",
+    "framer-motion": "^11.3.24",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18"
